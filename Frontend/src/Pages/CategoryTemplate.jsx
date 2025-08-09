@@ -6,6 +6,7 @@ import { useState } from 'react';
 import axios from "axios"; 
 import CourseCard from '../components/core/CoursePage/CourseCard';
 import Footer from '../Pages/Footer';
+import API_BASE_URL from '../config/api';
 
 const CategoryTemplate = () => {
   const [loading,setLoading] = useState(false);
@@ -29,21 +30,21 @@ const CategoryTemplate = () => {
       let allFailed = true;
       setLoading(true);
       try{
-        const newRes = await axios.post("http://localhost:3000/api/v1/course/new-courses",{categoryId:categoryId});
+        const newRes = await axios.post(`${API_BASE_URL}/api/v1/course/new-courses`,{categoryId:categoryId});
         setNewCourses(newRes.data.recentCourses);
         if (newRes.data.recentCourses.length > 0) allFailed = false;
       }catch(err) {
         console.warn("Failed to fetch new courses:", err);
       }
       try{
-        const popularRes = await axios.post("http://localhost:3000/api/v1/course/popular-courses-by-category", { categoryId:categoryId });
+        const popularRes = await axios.post(`${API_BASE_URL}/api/v1/course/popular-courses-by-category`, { categoryId:categoryId });
         setPopularCourses(popularRes.data.popularCourses);
         if (popularRes.data.popularCourses.length > 0) allFailed = false;
       }catch(err) {
         console.warn("Failed to fetch popular courses:", err);
       }
         try {
-        const trendingRes = await axios.post("http://localhost:3000/api/v1/course/trending-courses", { categoryId:categoryId });
+        const trendingRes = await axios.post(`${API_BASE_URL}/api/v1/course/trending-courses`, { categoryId:categoryId });
         setTrendingCourses(trendingRes.data.trendingCourse);
         if (trendingRes.data.trendingCourse.length > 0) allFailed = false;
       } catch (err) {
@@ -73,7 +74,7 @@ const CategoryTemplate = () => {
   useEffect(() => {
     const fetchDescp = async() => {
       try{
-        const res = await axios.post("http://localhost:3000/api/v1/course/find-category",{categoryId});
+        const res = await axios.post(`${API_BASE_URL}/api/v1/course/find-category`,{categoryId});
         setDescp(res.data.response.description);
         // console.log(res.data.response.description);
       }catch(err) {

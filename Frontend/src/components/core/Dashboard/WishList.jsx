@@ -8,6 +8,7 @@ import { useNavigate,useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useRating } from '../../../Pages/Contexts/RatingContext';
 import Ratings from '../CoursePage/Ratings';
+import API_BASE_URL from '../../../config/api';
 
 const WishList = () => {
   const [totalPrice,setTotalPrice] = useState(null);
@@ -21,7 +22,7 @@ const WishList = () => {
   const fetchWishListDetails = async() => {
     setLoading(true);
     try{
-      const res = await axios.get("http://localhost:3000/api/v1/course/get-wishlist");
+      const res = await axios.get(`${API_BASE_URL}/api/v1/course/get-wishlist`);
       console.log(res.data);
       setTotalPrice(res?.data?.data?.totalPrice);
       setListDetails(res?.data?.data?.wishList);
@@ -43,7 +44,7 @@ const WishList = () => {
   },[]);
   const removeWishList = async({id}) => {
     try{
-      const res = await axios.delete("http://localhost:3000/api/v1/course/remove-course",{data:{courseId:id}});
+      const res = await axios.delete(`${API_BASE_URL}/api/v1/course/remove-course`,{data:{courseId:id}});
       toast.success("Course removed from wishlist.");
       fetchWishListDetails();
     }catch(err) {

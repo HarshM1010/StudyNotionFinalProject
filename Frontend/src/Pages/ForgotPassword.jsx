@@ -5,6 +5,7 @@ import axios from 'axios';
 import Loading from '../components/Loading';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import API_BASE_URL from '../config/api';
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ const ForgotPassword = () => {
         setLoading(true);
         console.log(formData);
         try{
-            const res = await axios.post("http://localhost:3000/api/v1/user/forgot-password",{email:formData.email});
+            const res = await axios.post(`${API_BASE_URL}/api/v1/user/forgot-password`,{email:formData.email});
             // toast.success("Reset password link sent to email");
             const token = res.data.url.split("/").pop();
             navigate(`${currentPath}/check-email`,{state:{ email:formData.email }});

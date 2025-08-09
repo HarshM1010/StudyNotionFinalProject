@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAuth } from './AuthContext';
+import API_BASE_URL from '../../config/api';
 
 export const UserContext = createContext();
 
@@ -16,7 +17,7 @@ export const UserProvider = ({ children }) => {
   const fetchUserDetails = async() => {
     setLoadingUserDetails(true);
     try{
-      const res = await axios.get("http://localhost:3000/api/v1/profile/get-all-userdetails");
+      const res = await axios.get(`${API_BASE_URL}/api/v1/profile/get-all-userdetails`);
       console.log(res?.data?.userDetails);
       setUserDetails(res?.data?.userDetails);
       localStorage.setItem("userDetails", JSON.stringify(res?.data?.userDetails));

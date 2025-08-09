@@ -1,5 +1,6 @@
 import { createContext,useContext,useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../../config/api";
 
 export const ratingContext = createContext();
 
@@ -9,7 +10,7 @@ export const RatingProvider = ({children}) => {
     
     const fetchAvgRating = async(courseIds = []) => {   // i am sending an array of course ids to the api...
         try{
-            const res = await axios.post("http://localhost:3000/api/v1/course/average-Rating",{courseIds});
+            const res = await axios.post(`${API_BASE_URL}/api/v1/course/average-Rating`,{courseIds});
             // console.log(res);
             const ratings = res?.data?.averageRatings;
             // console.log(res.data.averageRatings);
@@ -21,7 +22,7 @@ export const RatingProvider = ({children}) => {
   
     const fetchTotalRating = async(courseIds = []) => {  
         try{
-            const res = await axios.post("http://localhost:3000/api/v1/course/total-Ratings",{courseIds});
+            const res = await axios.post(`${API_BASE_URL}/api/v1/course/total-Ratings`,{courseIds});
             const totals = res?.data?.totalRating;
             setTotalRatings(prev => ({...prev,...totals}));
             // console.log(res.data.totalRating);

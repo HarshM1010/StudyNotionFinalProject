@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
 import Loading from '../../Loading';
 import { IoChevronBack } from "react-icons/io5";
+import API_BASE_URL from '../../../config/api';
 
 const VideoLecture = () => {
     const location = useLocation();
@@ -19,7 +20,7 @@ const VideoLecture = () => {
         const getSubSectionDetails = async() => {
         setLoading(true);
         try{
-            const res = await axios.post("http://localhost:3000/api/v1/course/get-sub-section-details",{subSectionId:subSectionId});
+            const res = await axios.post(`${API_BASE_URL}/api/v1/course/get-sub-section-details`,{subSectionId:subSectionId});
             console.log(res);
             setVideoUrl(res?.data?.subSectionDetails?.videoUrl);
             setLectureName(res?.data?.subSectionDetails?.title);

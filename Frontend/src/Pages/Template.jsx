@@ -9,6 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
 import Loading from '../components/Loading';
 import { useAuth } from './Contexts/AuthContext';
+import API_BASE_URL from '../config/api';
 
 const Template = (props) => {
     const [showPassword,setShowPassword] = useState(false);
@@ -42,7 +43,7 @@ const Template = (props) => {
             } 
             else {
                 try{
-                    const res = await axios.post("http://localhost:3000/api/v1/auth/send-otp",{email: props.formData.email});
+                    const res = await axios.post(`${API_BASE_URL}/api/v1/auth/send-otp`,{email: props.formData.email});
                     toast.success("This otp will be valid only for 5 mins.");
                     navigate(`${currentPath}/verify-email`, { state: { formData: props.formData } });
                 }catch(err) {
@@ -54,7 +55,7 @@ const Template = (props) => {
         }
         if(props.formtype === "Login") {
             try{
-                const res = await axios.post("http://localhost:3000/api/v1/auth/login",{
+                const res = await axios.post(`${API_BASE_URL}/api/v1/auth/login`,{
                     email:props.formData.email,
                     password:props.formData.password
                 });

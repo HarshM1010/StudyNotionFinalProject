@@ -13,6 +13,7 @@ import { IoAddCircleOutline } from "react-icons/io5";
 import axios from 'axios';
 import AddModal from './AddModal';
 import { RxCrossCircled } from "react-icons/rx";
+import API_BASE_URL from '../../../config/api';
 
 const CourseBuilder = () => {
    
@@ -35,7 +36,7 @@ const CourseBuilder = () => {
     if(updateSectionId) {
       async function sectionDetails() {
         try{
-          const res = await axios.post("http://localhost:3000/api/v1/course/get-section-details",{sectionId:updateSectionId});
+          const res = await axios.post(`${API_BASE_URL}/api/v1/course/get-section-details`,{sectionId:updateSectionId});
           console.log(res);
           setFormData({
             sectionName:res?.data?.sectionDetails?.sectionName,
@@ -70,7 +71,7 @@ const CourseBuilder = () => {
     console.log(formData);
     if(updateSectionId) {
       try{
-        const res = await axios.put("http://localhost:3000/api/v1/course/update-section",{
+        const res = await axios.put(`${API_BASE_URL}/api/v1/course/update-section`,{
           sectionName:formData.sectionName,
           courseId:courseId,
           sectionId:updateSectionId,
@@ -86,7 +87,7 @@ const CourseBuilder = () => {
     }
     else {
       try{
-        const res = await axios.post("http://localhost:3000/api/v1/course/create-section",{
+        const res = await axios.post(`${API_BASE_URL}/api/v1/course/create-section`,{
           sectionName:formData.sectionName,
           courseId:courseId,
         });

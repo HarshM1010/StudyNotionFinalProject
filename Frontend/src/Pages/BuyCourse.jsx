@@ -8,6 +8,7 @@ import CourseSection from '../components/core/CoursePage/CourseSection';
 import { toast } from 'react-toastify';
 import { useRating } from './Contexts/RatingContext';
 import { useCourseDetails } from './Contexts/CourseContext';
+import API_BASE_URL from '../config/api';
 
 const BuyCourse = () => {
     const {courseName} = useParams();  
@@ -45,7 +46,7 @@ const BuyCourse = () => {
     }
     const cartHandler = async() => {
         try{
-            const res = await axios.post("http://localhost:3000/api/v1/course/add-to-cart",{
+            const res = await axios.post(`${API_BASE_URL}/api/v1/course/add-to-cart`,{
                 courseId:courseId,
             })
             console.log(res);

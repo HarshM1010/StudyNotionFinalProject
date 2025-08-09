@@ -11,6 +11,7 @@ import axios from 'axios';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCourseDetails } from '../../../Pages/Contexts/CourseContext';
+import API_BASE_URL from '../../../config/api';
 
 const AddNewCourse = () => {
   // const [currentStep, setCurrentStep] = useState(1);
@@ -91,7 +92,7 @@ const AddNewCourse = () => {
   useEffect(() => {
     const fetchCategories = async() => {
       try{
-        const res = await axios.get("http://localhost:3000/api/v1/course/get-all-categories");
+        const res = await axios.get(`${API_BASE_URL}/api/v1/course/get-all-categories`);
         // console.log(res);
         console.log(res?.data?.allCategories);
         setCategories(res?.data?.allCategories);
@@ -171,7 +172,7 @@ const AddNewCourse = () => {
       }
 
       const res = await toast.promise(
-        axios.post("http://localhost:3000/api/v1/course/create-course",
+        axios.post(`${API_BASE_URL}/api/v1/course/create-course`,
           courseData,
           {
             headers:{

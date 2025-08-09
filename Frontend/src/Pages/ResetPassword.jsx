@@ -5,6 +5,7 @@ import axios from 'axios';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from '../components/Loading';
+import API_BASE_URL from '../config/api';
 
 // keep the link working only upto 5 mins after the link is sent to the user email
 const ResetPassword = () => {
@@ -31,7 +32,7 @@ const ResetPassword = () => {
         // console.log(formData);
         setLoading(true);
         try{
-            const res = await axios.post("http://localhost:3000/api/v1/user/reset-password",{
+            const res = await axios.post(`${API_BASE_URL}/api/v1/user/reset-password`,{
                 newPassword:formData.newPassword,
                 confirmPassword:formData.confirmPassword,
                 token:token

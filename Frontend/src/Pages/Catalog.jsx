@@ -4,6 +4,7 @@ import axios from 'axios';
 import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { use } from 'react';
+import API_BASE_URL from '../config/api';
 
 const Catalog = (props) => {
   const [isOpen,setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const Catalog = (props) => {
   useEffect(() => {
     const fetchCategories = async() => {
       try{
-        const response = await axios.get("http://localhost:3000/api/v1/course/get-all-categories");
+        const response = await axios.get(`${API_BASE_URL}/api/v1/course/get-all-categories`);
         setCategories(response.data.allCategories);
         // console.log(response.data.allCategories);
         setError(null);

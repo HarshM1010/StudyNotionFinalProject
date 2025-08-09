@@ -5,6 +5,8 @@ import axios from 'axios';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from '../components/Loading';
+import API_BASE_URL from '../config/api';
+
 const VerifyEmail = () => {
     const [otp,setOtp] = useState(new Array(6).fill(""));
     const location = useLocation();
@@ -47,7 +49,7 @@ const VerifyEmail = () => {
             formData.otp = numberOtp;
             console.log(formData);
             try{
-                const res = await axios.post("http://localhost:3000/api/v1/auth/signup",{
+                const res = await axios.post(`${API_BASE_URL}/api/v1/auth/signup`,{
                     firstName:formData.firstname,
                     lastName:formData.lastname,
                     email:formData.email,

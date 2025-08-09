@@ -18,6 +18,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from 'react-router-dom';
+import API_BASE_URL from '../../../config/api';
 
 const Profile = () => {
   const {userDetails,loadingUserDetails,fetchUserDetails} = useUser();
@@ -70,7 +71,7 @@ const Profile = () => {
     console.log(formData);
     console.log(userDetails?.additionalDetails);
       try{
-        const res = await axios.post("http://localhost:3000/api/v1/profile/create-profile",{
+        const res = await axios.post(`${API_BASE_URL}/api/v1/profile/create-profile`,{
           firstName:formData.firstName.trim() || userDetails?.firstName,
           lastName:formData.lastName.trim() || userDetails?.lastName,
           about:formData.about.trim() ,

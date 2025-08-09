@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useContext,createContext } from 'react'
 import axios from 'axios';
+import API_BASE_URL from '../../config/api';
+
 export const courseContext = createContext();
 
 export const CourseProvider = ({children}) => {
@@ -8,7 +10,7 @@ export const CourseProvider = ({children}) => {
 
     const fetchCourse = async(courseId) => {
         try{
-            const res = await axios.post("http://localhost:3000/api/v1/course/get-course-details",
+            const res = await axios.post(`${API_BASE_URL}/api/v1/course/get-course-details`,
                 {courseId:courseId},
             );
             setCourseDetails(res.data.courseDetails);

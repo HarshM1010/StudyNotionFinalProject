@@ -3,6 +3,7 @@ import axios from 'axios';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from '../../Loading';
+import API_BASE_URL from '../../../config/api';
 
 const ChangePassword = () => {
     const [resetComplete,setResetComplete] = useState(false);
@@ -22,7 +23,7 @@ const ChangePassword = () => {
         console.log(formData);
         setLoading(true);
         try{
-            const res = await axios.put("http://localhost:3000/api/v1/profile/change-password",{
+            const res = await axios.put(`${API_BASE_URL}/api/v1/profile/change-password`,{
                 oldPassword:formData.oldPassword,
                 newPassword:formData.newPassword,
                 confirmPassword:formData.confirmPassword,

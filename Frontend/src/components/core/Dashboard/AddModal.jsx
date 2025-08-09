@@ -6,6 +6,8 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCourseDetails } from '../../../Pages/Contexts/CourseContext';
 import { useEffect } from 'react';
+import API_BASE_URL from '../../../config/api';
+
 const AddModal = ({selectedSectionId,setSelectedSectionId,onClose,courseId,updateSubSectionId,setUpdateSubSectionId}) => {
     const fileInputRef = useRef(null);
     const {fetchCourse} = useCourseDetails();
@@ -36,7 +38,7 @@ const AddModal = ({selectedSectionId,setSelectedSectionId,onClose,courseId,updat
         // console.log(updateSubSectionId.sectionId);
         // console.log(updateSubSectionId.subSectionId);
         try{
-          const res = await axios.post("http://localhost:3000/api/v1/course/get-sub-section-details",{subSectionId:updateSubSectionId.subSectionId});
+          const res = await axios.post(`${API_BASE_URL}/api/v1/course/get-sub-section-details`,{subSectionId:updateSubSectionId.subSectionId});
           console.log(res);
           setFormData({
             title: res?.data?.subSectionDetails?.title || "",
@@ -84,7 +86,7 @@ const AddModal = ({selectedSectionId,setSelectedSectionId,onClose,courseId,updat
         let res;
         if(updateSubSectionId.subSectionId) {
           res = await toast.promise(
-            axios.put("http://localhost:3000/api/v1/course/update-subsection",
+            axios.put(`${API_BASE_URL}/api/v1/course/update-subsection`,
               data,
               {
                 headers:{
@@ -105,7 +107,7 @@ const AddModal = ({selectedSectionId,setSelectedSectionId,onClose,courseId,updat
         }
         else {
           res = await toast.promise(
-            axios.post("http://localhost:3000/api/v1/course/create-subsection",
+            axios.post(`${API_BASE_URL}/api/v1/course/create-subsection`,
               data,
               {
                 headers:{

@@ -10,6 +10,7 @@ import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { useCourseDetails } from '../../../Pages/Contexts/CourseContext';
 import { useNavigate,useLocation } from 'react-router-dom'
+import API_BASE_URL from '../../../config/api';
 
 const CourseSection = ({isCollapse,setIsCollapse,setShowModal,setSelectedSectionId,courseId,setUpdateSectionId,setUpdateSubSectionId}) => {
     const token = localStorage.getItem("token");
@@ -32,7 +33,7 @@ const CourseSection = ({isCollapse,setIsCollapse,setShowModal,setSelectedSection
     async function deleteSubSecion(sectionId,subSectionId) {
         try{
             const res = await toast.promise(
-                axios.post("http://localhost:3000/api/v1/course/delete-subsection",{
+                axios.post(`${API_BASE_URL}/api/v1/course/delete-subsection`,{
                     sectionId:sectionId,
                     subSectionId:subSectionId,
                 }),
