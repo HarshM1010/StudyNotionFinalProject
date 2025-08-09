@@ -1,0 +1,32 @@
+[
+  {
+    "user": "684176b2dfb25b494aa0f681",
+    "course": "68602b9892e8b12d9fd42d09",
+    "rating": 4,
+    "review": "Great course! Well structured and easy to follow."
+  },
+  {
+    "user": "68600e72fa4cd566f12a9cce",
+    "course": "68602b9892e8b12d9fd42d09",
+    "rating": 5,
+    "review": "Excellent content. The instructor was very knowledgeable."
+  },
+  {
+    "user": "68600e72fa4cd566f12a9cd3",
+    "course": "68602b9892e8b12d9fd42d09",
+    "rating": 3,
+    "review": "Good course, but could use more examples."
+  },
+  {
+    "user": "68600e72fa4cd566f12a9cd4",
+    "course": "68602b9892e8b12d9fd42d09",
+    "rating": 4.5,
+    "review": "Loved the practical sections. Helped a lot!"
+  },
+  {
+    "user": "68600e72fa4cd566f12a9cd6",
+    "course": "68602b9892e8b12d9fd42d09",
+    "rating": 2,
+    "review": "Too basic for intermediate learners."
+  }
+]

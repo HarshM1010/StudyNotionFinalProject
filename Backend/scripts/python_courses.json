@@ -1,0 +1,852 @@
+[
+  {
+    "courseName": "Clearly Python Move",
+    "courseDuration": {
+      "value": 7,
+      "unit": "weeks"
+    },
+    "coursePrice": 401,
+    "courseDescription": "Event oil among like high woman lose best art I decision court south.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "NumPy",
+      "Arrays",
+      "Operations"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "django",
+      "flask",
+      "OOP"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Yourself Python Detail",
+    "courseDuration": {
+      "value": 5,
+      "unit": "weeks"
+    },
+    "coursePrice": 472,
+    "courseDescription": "Operation assume piece camera special executive light fly cover majority choose ago age easy whether word meet hot finish.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Flask",
+      "Routing",
+      "Templates"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "OOP",
+      "flask",
+      "AI"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Personal Python Follow",
+    "courseDuration": {
+      "value": 3,
+      "unit": "months"
+    },
+    "coursePrice": 315,
+    "courseDescription": "Market science off picture others pass worry everyone blue recent company gun already condition travel maintain sell factor dinner.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "OOP",
+      "Inheritance",
+      "Encapsulation"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "AI",
+      "python",
+      "scripting"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Speak Python Form",
+    "courseDuration": {
+      "value": 7,
+      "unit": "months"
+    },
+    "coursePrice": 224,
+    "courseDescription": "Wait item long upon fast second current budget should sea pretty project southern team suffer the coach cell take reach.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "NumPy",
+      "Arrays",
+      "Operations"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "scripting",
+      "machine learning",
+      "flask"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Toward Python Room",
+    "courseDuration": {
+      "value": 6,
+      "unit": "weeks"
+    },
+    "coursePrice": 128,
+    "courseDescription": "Like writer here unit agree determine economy generation protect choice big produce officer federal coach.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "File I/O",
+      "Error Handling",
+      "Debugging"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "data science",
+      "scripting",
+      "automation"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Soon Python Line",
+    "courseDuration": {
+      "value": 10,
+      "unit": "months"
+    },
+    "coursePrice": 145,
+    "courseDescription": "The father event hundred own consider among tree rich for whom image without know social also computer thing appear continue.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "File I/O",
+      "Error Handling",
+      "Debugging"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "automation",
+      "django",
+      "OOP"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Consider Python Something",
+    "courseDuration": {
+      "value": 6,
+      "unit": "months"
+    },
+    "coursePrice": 164,
+    "courseDescription": "Western rule each better easy group career executive job animal contain usually back writer least.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Matplotlib",
+      "Visualization",
+      "Seaborn"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "data science",
+      "scripting",
+      "django"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Example Python Government",
+    "courseDuration": {
+      "value": 5,
+      "unit": "weeks"
+    },
+    "coursePrice": 147,
+    "courseDescription": "Into force per child per you loss house whom way.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "OOP",
+      "Inheritance",
+      "Encapsulation"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "AI",
+      "python",
+      "data science"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Soldier Python Couple",
+    "courseDuration": {
+      "value": 8,
+      "unit": "weeks"
+    },
+    "coursePrice": 478,
+    "courseDescription": "Through partner pretty wrong phone offer receive business near two some design me manage reach.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "File I/O",
+      "Error Handling",
+      "Debugging"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "django",
+      "web development",
+      "machine learning"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Bag Python Far",
+    "courseDuration": {
+      "value": 4,
+      "unit": "months"
+    },
+    "coursePrice": 379,
+    "courseDescription": "Impact room house student fact fear next receive size risk court guy trial ask it to fill box between.",
+    "instructor": "684004f9b45a308fcf0a6bcd",
+    "whatYouWillLearn": [
+      "Testing",
+      "Unittest",
+      "Pytest"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "automation",
+      "OOP",
+      "django"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Production Python Money",
+    "courseDuration": {
+      "value": 4,
+      "unit": "weeks"
+    },
+    "coursePrice": 164,
+    "courseDescription": "Anyone several give fund say glass behavior billion itself east lawyer development a case each camera.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Web Scraping",
+      "APIs",
+      "BeautifulSoup"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "AI",
+      "OOP",
+      "web development"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Those Python Tax",
+    "courseDuration": {
+      "value": 11,
+      "unit": "months"
+    },
+    "coursePrice": 272,
+    "courseDescription": "Policy visit condition feel if do cell father forward outside wrong try develop executive environment enjoy gas create.",
+    "instructor": "684004f9b45a308fcf0a6bcd",
+    "whatYouWillLearn": [
+      "Matplotlib",
+      "Visualization",
+      "Seaborn"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "machine learning",
+      "scripting",
+      "AI"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "If Python Drop",
+    "courseDuration": {
+      "value": 5,
+      "unit": "months"
+    },
+    "coursePrice": 177,
+    "courseDescription": "National list sea five sound care list tend eight there article ok.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Flask",
+      "Routing",
+      "Templates"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "web development",
+      "automation",
+      "python"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Treatment Python Under",
+    "courseDuration": {
+      "value": 3,
+      "unit": "weeks"
+    },
+    "coursePrice": 151,
+    "courseDescription": "Site without market defense someone war must marriage get agreement probably really job student and commercial technology onto share able.",
+    "instructor": "684004f9b45a308fcf0a6bcd",
+    "whatYouWillLearn": [
+      "Flask",
+      "Routing",
+      "Templates"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "python",
+      "AI",
+      "machine learning"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "House Python Do",
+    "courseDuration": {
+      "value": 7,
+      "unit": "months"
+    },
+    "coursePrice": 236,
+    "courseDescription": "Right gas conference air board eat clear campaign including reflect eight clearly century town cost take everything employee fear.",
+    "instructor": "684004f9b45a308fcf0a6bcd",
+    "whatYouWillLearn": [
+      "Variables",
+      "Loops",
+      "Functions"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "scripting",
+      "django",
+      "data science"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Safe Python Nature",
+    "courseDuration": {
+      "value": 10,
+      "unit": "weeks"
+    },
+    "coursePrice": 122,
+    "courseDescription": "Environment evening rock might first senior interest finish worry argue candidate.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Testing",
+      "Unittest",
+      "Pytest"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "automation",
+      "data science",
+      "OOP"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Position Python Republican",
+    "courseDuration": {
+      "value": 3,
+      "unit": "months"
+    },
+    "coursePrice": 168,
+    "courseDescription": "Enough trade present special your in always listen research care.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Variables",
+      "Loops",
+      "Functions"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "OOP",
+      "python",
+      "machine learning"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Be Python Fear",
+    "courseDuration": {
+      "value": 7,
+      "unit": "weeks"
+    },
+    "coursePrice": 137,
+    "courseDescription": "May could teacher war send late base coach at crime reality first ability money accept indeed office.",
+    "instructor": "684004f9b45a308fcf0a6bcd",
+    "whatYouWillLearn": [
+      "Pandas",
+      "DataFrames",
+      "Cleaning"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "data science",
+      "AI",
+      "OOP"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Responsibility Python Individual",
+    "courseDuration": {
+      "value": 7,
+      "unit": "months"
+    },
+    "coursePrice": 220,
+    "courseDescription": "Will few century direction long floor prevent simply discuss sign feel relate trip gas magazine really letter national piece.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Web Scraping",
+      "APIs",
+      "BeautifulSoup"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "AI",
+      "python",
+      "data science"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Member Python Plan",
+    "courseDuration": {
+      "value": 5,
+      "unit": "weeks"
+    },
+    "coursePrice": 268,
+    "courseDescription": "Street evening loss close for end cold management property recognize technology involve either treatment land beat fast record fast.",
+    "instructor": "684004f9b45a308fcf0a6bcd",
+    "whatYouWillLearn": [
+      "Variables",
+      "Loops",
+      "Functions"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "web development",
+      "python",
+      "automation"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Crime Python Throughout",
+    "courseDuration": {
+      "value": 9,
+      "unit": "weeks"
+    },
+    "coursePrice": 192,
+    "courseDescription": "Voice their dinner ago ground structure value grow mention career similar successful us pick suggest scientist south usually respond.",
+    "instructor": "684004f9b45a308fcf0a6bcd",
+    "whatYouWillLearn": [
+      "Variables",
+      "Loops",
+      "Functions"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "data science",
+      "web development",
+      "django"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Station Python Bed",
+    "courseDuration": {
+      "value": 5,
+      "unit": "weeks"
+    },
+    "coursePrice": 151,
+    "courseDescription": "Evidence impact usually figure candidate line play blue main including heart will.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "File I/O",
+      "Error Handling",
+      "Debugging"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "data science",
+      "django",
+      "web development"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Camera Python Commercial",
+    "courseDuration": {
+      "value": 5,
+      "unit": "months"
+    },
+    "coursePrice": 201,
+    "courseDescription": "Bring should assume piece front cup single create appear public individual main computer thousand.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "Flask",
+      "Routing",
+      "Templates"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "python",
+      "OOP",
+      "web development"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Present Python Meet",
+    "courseDuration": {
+      "value": 12,
+      "unit": "months"
+    },
+    "coursePrice": 408,
+    "courseDescription": "Sit agency point recent trouble sit role challenge rock difficult purpose hospital grow least from federal.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "NumPy",
+      "Arrays",
+      "Operations"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "python",
+      "automation",
+      "OOP"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  },
+  {
+    "courseName": "Under Python Ready",
+    "courseDuration": {
+      "value": 12,
+      "unit": "months"
+    },
+    "coursePrice": 456,
+    "courseDescription": "Owner recently she market tax manager senior name similar.",
+    "instructor": "684035b010e49e49968c6dc2",
+    "whatYouWillLearn": [
+      "NumPy",
+      "Arrays",
+      "Operations"
+    ],
+    "courseContent": [
+      "6848565a8a4ad1fcff9fd36f",
+      "6848566d8a4ad1fcff9fd373"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://res.cloudinary.com/dar413qqp/image/upload/v1749134271/uploadedDocs/svi7ryy9jukl9hthxsbg.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": [
+      "scripting",
+      "AI",
+      "flask"
+    ],
+    "category": [
+      "6841906a0231fc16e28beeb0"
+    ],
+    "prerequisites": [
+      "Basic Python knowledge"
+    ]
+  }
+]

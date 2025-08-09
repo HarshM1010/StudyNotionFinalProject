@@ -1,0 +1,135 @@
+[
+  {
+    "courseName": "Full Stack Web Development",
+    "courseDuration": {
+      "value": 12,
+      "unit": "weeks"
+    },
+    "coursePrice": 499,
+    "courseDescription": "Learn full-stack development using modern technologies like React, Node.js, and MongoDB.",
+    "instructor": "64bdeee07c8e7d0fa40f26a1",
+    "whatYouWillLearn": [
+      "HTML & CSS",
+      "JavaScript",
+      "React.js",
+      "Node.js",
+      "MongoDB"
+    ],
+    "courseContent": [
+      "64be101f8f9c4b2ab85e1831",
+      "64be102a8f9c4b2ab85e1832"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://example.com/thumbnails/fullstack.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": ["development", "fullstack", "javascript"],
+    "category": ["64bdffdc8f9c4b2ab85e100a"],
+    "prerequisites": ["Basic computer knowledge", "Internet connection"]
+  },
+  {
+    "courseName": "Data Structures and Algorithms",
+    "courseDuration": {
+      "value": 2,
+      "unit": "months"
+    },
+    "coursePrice": 299,
+    "courseDescription": "Master DSA for coding interviews and competitive programming.",
+    "instructor": "64bdeee07c8e7d0fa40f26a2",
+    "whatYouWillLearn": [
+      "Arrays",
+      "Linked Lists",
+      "Trees",
+      "Graphs",
+      "Dynamic Programming"
+    ],
+    "courseContent": [
+      "64be10308f9c4b2ab85e1833"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://example.com/thumbnails/dsa.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": ["algorithms", "DSA", "coding"],
+    "category": ["64bdffdc8f9c4b2ab85e100b"],
+    "prerequisites": ["Basic programming knowledge"]
+  },
+  {
+    "courseName": "Machine Learning Bootcamp",
+    "courseDuration": {
+      "value": 10,
+      "unit": "weeks"
+    },
+    "coursePrice": 599,
+    "courseDescription": "An intensive bootcamp covering supervised and unsupervised learning, model evaluation, and real-world applications.",
+    "instructor": "64bdeee07c8e7d0fa40f26a3",
+    "whatYouWillLearn": [
+      "Linear Regression",
+      "Classification",
+      "Clustering",
+      "Model Evaluation"
+    ],
+    "courseContent": [
+      "64be103a8f9c4b2ab85e1834"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://example.com/thumbnails/ml.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": ["ML", "AI", "data science"],
+    "category": ["64bdffdc8f9c4b2ab85e100c"],
+    "prerequisites": ["Python basics", "Linear Algebra", "Statistics"]
+  },
+  {
+    "courseName": "Graphic Design Fundamentals",
+    "courseDuration": {
+      "value": 4,
+      "unit": "weeks"
+    },
+    "coursePrice": 199,
+    "courseDescription": "A beginner-friendly course to learn the principles of visual design using tools like Canva and Adobe Illustrator.",
+    "instructor": "64bdeee07c8e7d0fa40f26a4",
+    "whatYouWillLearn": [
+      "Color Theory",
+      "Typography",
+      "Layout Design",
+      "Branding Basics"
+    ],
+    "courseContent": [
+      "64be10428f9c4b2ab85e1835"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://example.com/thumbnails/design.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": ["design", "UI", "visual"],
+    "category": ["64bdffdc8f9c4b2ab85e100d"],
+    "prerequisites": []
+  },
+  {
+    "courseName": "Introduction to Cloud Computing",
+    "courseDuration": {
+      "value": 6,
+      "unit": "weeks"
+    },
+    "coursePrice": 399,
+    "courseDescription": "Understand cloud platforms, architectures, and services like AWS, Azure, and GCP.",
+    "instructor": "64bdeee07c8e7d0fa40f26a5",
+    "whatYouWillLearn": [
+      "Cloud Basics",
+      "AWS & Azure",
+      "Storage & Networking",
+      "Deployment Models"
+    ],
+    "courseContent": [
+      "64be104e8f9c4b2ab85e1836"
+    ],
+    "ratingAndReview": [],
+    "thumbnail": "https://example.com/thumbnails/cloud.jpg",
+    "languageUsed": "English",
+    "studentsEnrolled": [],
+    "tags": ["cloud", "AWS", "infrastructure"],
+    "category": ["64bdffdc8f9c4b2ab85e100e"],
+    "prerequisites": ["Basic IT knowledge"]
+  }
+]
