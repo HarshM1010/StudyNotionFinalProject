@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const {contactUs} = require("../Controllers/ContactUs");
-const {addPurchaseHistory,getAllPurchaseHistory} = require("../Controllers/PurchaseHistory");
+const {addPurchaseHistory,getAllPurchaseHistory} = require("../Controllers/purchaseHistory");
 
 const {forgotPassword,resetPassword} = require("../Controllers/ResetPassword");
 const {auth,isStudent,isAdmin,isInstructor} = require("../Middlewares/auth");
