@@ -47,3 +47,38 @@ StudyNotionFinalProject/
 ├── frontend/ # React frontend
 ├── backend/ # Node.js backend
 └── README.md
+
+
+## ⚡ Installation & Setup 
+
+1. Clone the repository
+ 
+  git clone https://github.com/HarshM1010/StudyNotionFinalProject.git
+  cd StudyNotionFinalProject
+  
+2. Install dependencies
+
+  cd backend
+  npm install
+  cd ../frontend
+  npm install
+  
+3. Set environment variables
+  Create .env files in both frontend and backend directories and configure:
+  PORT=5000
+  MONGO_URI=your_mongodb_connection
+  JWT_SECRET=your_secret
+  CLOUDINARY_KEY=your_key
+  CLOUDINARY_SECRET=your_secret
+ 
+4. Run the project
+  # Backend
+  cd backend
+  npm run dev
+  
+  # Frontend
+  cd ../frontend
+  npm start
+
+
+ 
