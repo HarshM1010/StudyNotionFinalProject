@@ -198,7 +198,9 @@ exports.login = async(req,res) => {
             userObj.password = undefined;
             const options = {
                 expires: new Date(Date.now() + 3*24*60*60*1000), //expires in 3 days...
-                httpOnly:true
+                httpOnly:true,
+                secure: process.env.NODE_ENV === 'production', // HTTPS in production
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax' // Allow cross-domain
             };
             console.log(token);
             res.cookie("token",token,options).status(200).json({

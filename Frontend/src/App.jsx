@@ -31,8 +31,35 @@ import AddNewCourse from './components/core/Dashboard/AddNewCourse'
 import CourseBuilder from './components/core/Dashboard/CourseBuilder'
 import VideoLecture from './components/core/Dashboard/VideoLecture'
 import CourseVideoLecture from './components/core/Dashboard/CourseVideoLecture'
+import API_BASE_URL from './config/api'
 
+// Configure axios for cross-domain authentication
+axios.defaults.baseURL = API_BASE_URL;
 axios.defaults.withCredentials = true;
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+
+// Add interceptors for better debugging
+axios.interceptors.request.use(
+  (config) => {
+    console.log('Making request to:', config.url);
+    return config;
+  },
+  (error) => {
+    console.error('Request error:', error);
+    return Promise.reject(error);
+  }
+);
+
+axios.interceptors.response.use(
+  (response) => {
+    console.log('Response success:', response.status);
+    return response;
+  },
+  (error) => {
+    console.error('Response error:', error.response?.status, error.response?.data);
+    return Promise.reject(error);
+  }
+);
 function App() {
   return (
     <div className='text-white text-[18px] bg-[#000814] scroll-smooth w-screen min-h-screen'>

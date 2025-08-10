@@ -47,8 +47,3 @@ export const UserProvider = ({ children }) => {
 };
 
 export const useUser = () => useContext(UserContext);
-
-
-
-
-// 684035b010e49e49968c6dc2
