@@ -68,8 +68,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout/>}>
             <Route index element={<Home/>}/>  
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path='/about' element={<About/>}/>    
+            <Route path="/contact" element={<Contact/>}/>   
             <Route path='/catalog/:categoryName' element={<CategoryTemplate/>}/>   
             <Route path='/catalog/:categoryName/buy-courses/:courseName' element={<BuyCourse/>}/>
           </Route>

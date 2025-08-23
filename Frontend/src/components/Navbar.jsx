@@ -41,9 +41,6 @@ const Navbar = () => {
               <li>
                 <Catalog isClicked={activeNav} setActiveNav={setActiveNav}/>
               </li>
-              <li>
-                <NavLink onClick={() => setActiveNav("about")} to="/about">About</NavLink>
-              </li>
               <li className=''>
                 <NavLink onClick={() => setActiveNav("contact")} to="/contact">Contact us</NavLink>
               </li>
