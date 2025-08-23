@@ -60,11 +60,13 @@ axios.interceptors.response.use(
   }
 );
 function App() {
+  
   useEffect(() => {
     // Wake up backend when frontend loads
     fetch("https://studynotionfinalproject-1.onrender.com/")
       .catch(err => console.log("Backend wakeup request failed", err));
   }, []);
+
   return (
     <div className='text-white text-[18px] bg-[#000814] scroll-smooth w-screen min-h-screen'>
       <div className='w-[100%] mx-auto'>
