@@ -22,6 +22,7 @@ const Template = (props) => {
     const navigate = useNavigate();
     const emailId = location.state?.email;
     const {setIsLoggedIn} = useAuth();
+
     if(emailId) {
         props.formData.email = emailId;
     }
@@ -39,6 +40,7 @@ const Template = (props) => {
         if(props.formtype === "Signup") {
             if(props.formData.createpassword !== props.formData.confirmpassword) {
                 toast.error("Passwords do not match");
+                setLoading(false);
                 return;
             } 
             else {

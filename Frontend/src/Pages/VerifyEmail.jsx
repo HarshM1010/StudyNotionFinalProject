@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useRef } from 'react';
+import { useState,useRef,useEffect } from 'react';
 import { useLocation,useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { toast } from "react-toastify";
@@ -14,10 +14,20 @@ const VerifyEmail = () => {
     const inputsRef = useRef([]);
     const navigate = useNavigate();
     const [loading,setLoading] = useState(false);
+    const [timer,setTimer] = useState(200);
 
+    useEffect(() => {
+        let interval = null;
+        if (timer > 0) {
+        interval = setInterval(() => {
+            setTimer((prev) => prev - 1);
+        }, 1000);
+        }
+        return () => clearInterval(interval);
+    }, [timer]);
     function changeHandler(e,ind) {
         console.log(otp);
-        const value = e.value.replace(/[^0-9]/g,"");
+        const value = e.target.value.replace(/[^0-9]/g,"");
         if(value.length > 1) return;
         const newOtp = [...otp];
         newOtp[ind] = value;
@@ -26,6 +36,7 @@ const VerifyEmail = () => {
             inputsRef.current[ind + 1].focus();
         }
     }
+    console.log(timer);
     function keyDownHandler(e,ind) {
         if(e.key === "Backspace") {
             if(otp[ind] === "") {
@@ -67,6 +78,18 @@ const VerifyEmail = () => {
         }
         else return;
     }
+    async function resendOTPHandler() {
+        try {
+            await axios.post(`${API_BASE_URL}/api/v1/auth/send-otp`, {
+                email: formData.email,
+            });
+            toast.success("OTP resent successfully!");
+            setTimer(300); // start 5 min timer
+            } catch (err) {
+            toast.error("Failed to resend OTP");
+            console.error("Resend OTP error:", err.response?.data || err.message);
+        }
+    }
     return (
         <div className={`py-25 ${loading ? "h-[560px] flex items-center justify-center" : ""}`}>
             {
@@ -79,7 +102,7 @@ const VerifyEmail = () => {
                             Verify Email
                         </h1>
                         <p className="text-[1.125rem] leading-[1.625rem] my-4 text-[#747986] tracking-wide">
-                            A verification code has been sent to you. Enter the code below
+                            A verification code has been sent to you. This code will be valid for 5 mins only. Enter the code below
                         </p>
                         <form className='flex flex-col gap-6 w-full' onSubmit={submitHandler}>
                             <div className='flex flex-row justify-between items-center'>
@@ -88,8 +111,8 @@ const VerifyEmail = () => {
                                         <input 
                                             key={ind} 
                                             placeholder="-" 
-                                            autocomplete="off" 
-                                            maxlength="1" 
+                                            autoComplete="off" 
+                                            maxLength={1}
                                             type="text" 
                                             inputMode='numeric'
                                             value={digit}
@@ -97,7 +120,7 @@ const VerifyEmail = () => {
                                             className="w-[48px] lg:w-[60px] border-0 bg-[#161D29]
                                             rounded-[0.5rem] aspect-square text-center outline" 
                                             style={{boxShadow: 'inset 0px -1px 0px rgba(255, 255, 255, 0.18)'}}
-                                            onChange={(e) => changeHandler(e.target,ind)}
+                                            onChange={(e) => changeHandler(e,ind)}
                                             ref={(el) => (inputsRef.current[ind] = el)}
                                             onKeyDown={(e) => keyDownHandler(e,ind)}
                                         />   
@@ -119,7 +142,11 @@ const VerifyEmail = () => {
                                     Back To Signup
                                 </p>
                             </a>
-                            <button className='text-[#47A5C5] flex flex-row items-center gap-2 cursor-pointer'>
+                            <button 
+                                disabled={timer > 0}
+                                onClick={resendOTPHandler}
+                                className={`text-[#47A5C5] flex flex-row items-center gap-2
+                                ${timer > 0 ? "text-gray-500 cursor-default" : "text-[#47A5C5] cursor-pointer"}`}>
                                 <svg  fill="currentColor" viewBox="0 0 15 15" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" >
                                     <path
                                         d="M13.15 7.49998C13.15 4.66458 10.9402 1.84998 7.50002 

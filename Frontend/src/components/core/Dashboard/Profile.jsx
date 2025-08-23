@@ -105,7 +105,6 @@ const Profile = () => {
                     <h1 className='font-semibold tracking-wide'>Change Profile Picture</h1>
                     <div className='flex flex-row gap-5'>
                       <button className='bg-[#FFD60A] rounded-md py-1 text-[18px] px-6 text-[#000814] cursor-pointer font-semibold tracking-wide'>Change</button>
-                      <button className=' bg-[#2C333F] border-[#424854] border-2 rounded-md py-1 text-[18px] px-6 text-[#C5C7D4] cursor-pointer font-semibold tracking-wide'>Remove</button>
                     </div>  
                   </div>
                 </div>

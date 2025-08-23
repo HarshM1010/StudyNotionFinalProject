@@ -46,7 +46,8 @@ const ResetPassword = () => {
                 toast.error("Passwords didn't match");
             }
             else {
-                console.warn("Token has expired.")
+                console.warn("Token has expired.");
+                toast.error("This link has been expired");
             }
             setLoading(false);
             // console.warn("Cannot change the password, try again later.");
