@@ -5,7 +5,7 @@ import Login from './Pages/Login'
 import Dashboard from './Pages/Dashboard'
 import Signup from './Pages/Signup'
 import CategoryTemplate from './Pages/CategoryTemplate'
-import { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import {Routes , Route ,  BrowserRouter } from "react-router-dom"
 import Contact from './Pages/Contact'
 import ForgotPassword from './Pages/ForgotPassword'
@@ -60,6 +60,11 @@ axios.interceptors.response.use(
   }
 );
 function App() {
+  useEffect(() => {
+    // Wake up backend when frontend loads
+    fetch("https://studynotionfinalproject-1.onrender.com/")
+      .catch(err => console.log("Backend wakeup request failed", err));
+  }, []);
   return (
     <div className='text-white text-[18px] bg-[#000814] scroll-smooth w-screen min-h-screen'>
       <div className='w-[100%] mx-auto'>
