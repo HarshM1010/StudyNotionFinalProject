@@ -4,7 +4,6 @@ import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Dashboard from './Pages/Dashboard'
 import Signup from './Pages/Signup'
-import About from './Pages/About'
 import CategoryTemplate from './Pages/CategoryTemplate'
 import { useEffect, useState } from 'react'
 import {Routes , Route ,  BrowserRouter } from "react-router-dom"
