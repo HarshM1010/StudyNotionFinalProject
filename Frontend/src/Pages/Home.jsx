@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <div className='mx-auto w-full'>
       {/*  section 1*/ }
-      <div className=' bg-[#000814] pt-[4rem] flex flex-col gap-18 w-[82%] mx-auto'>
+      <div className=' bg-[#000814] pt-[4rem] flex flex-col gap-18 w-[82%] mx-auto pb-20'>
           <div className='mx-auto flex flex-col gap-7'>
               <Link to={"/signup"} className=' w-fit mx-auto'>
                 <div className='flex justify-center w-fit mx-auto items-center gap-3 bg-[#161D29] px-[2rem] text-[19px] text-[#999DAA] font-medium py-2 rounded-3xl border-b border-b-[#999DAA] transition-all duration-200 hover:scale-95'>
@@ -146,7 +146,7 @@ const Home = () => {
               "text-[#D3F6FE]"
             }
           />
-          <div className='flex flex-col gap-7 mt-10'>
+          {/* <div className='flex flex-col gap-7 mt-10'>
               <div className='flex flex-col gap-2'>
                 <h1 className='mx-auto w-fit text-4xl font-medium text-center'>Unlock the <span className='bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold'>Power of Code</span></h1>
                 <p className='mx-auto w-fit text-[#838894] font-medium'>Learn to Build Anything You Can Imagine</p>
@@ -158,8 +158,8 @@ const Home = () => {
                 <button type='button' onClick={() => setCheckType("Skills Paths")} className={`px-4 py-1.5 rounded-4xl ml-auto mr-1.5 flex items-center justify-center text-[#999DAA] text-[19px] cursor-pointer  ${checkType === "Skills Paths" && "bg-[#000814] text-white"} hover:bg-[#000814] hover:text-white`}>Skills Paths</button>
                 <button type='button' onClick={() => setCheckType("Career Paths")} className={`px-4 py-1.5 rounded-4xl ml-auto mr-1.5 flex items-center justify-center text-[#999DAA] text-[19px] cursor-pointer  ${checkType === "Career Paths" && "bg-[#000814] text-white"} hover:bg-[#000814] hover:text-white`}>Career Paths</button>
             </div>
-          </div>
-          <div className='flex gap-20'>
+          </div> */}
+          {/* <div className='flex gap-20'>
             <div className={`bg-[#161D29] flex flex-col gap-12`}>
               <div className='px-7 py-7 flex flex-col gap-4'>
                 <h1 className='capitalize font-medium text-[20px]'>Learn HTML</h1>
@@ -213,7 +213,7 @@ const Home = () => {
                 </path></svg>
               </div>
             </div>
-          </div>
+          </div> */}
       </div>
       {/* section 2 */}
       <div className='bg-[#F9F9F9]'>
