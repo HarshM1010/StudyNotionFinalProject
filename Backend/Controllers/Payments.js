@@ -3,7 +3,9 @@ const Course = require('../Models/Course');
 const User = require("../Models/User");
 const mailSender = require("../utils/mailSender");
 const {courseEnrollmentEmail} = require("../mail/templates/courseEnrollment");
-
+const crypto = require("crypto");
+const { default: mongoose } = require("mongoose");
+require("dotenv").config();
 
 //capture the payment and initiate the Razorpay order
 exports.capturePayment = async(req,res) => {
@@ -33,16 +35,16 @@ exports.capturePayment = async(req,res) => {
         }
         
         //will check if user had already purchased the course or not..
-        const isPreviouslyEnrolled = await Course.findById(
-            courseId,
+        const isPreviouslyEnrolled = await Course.findOne(
             {
-                studentsEnrolled:userId,
+                _id: courseId,
+                studentsEnrolled:new mongoose.Types.ObjectId(userId),
             }
         )
         if(isPreviouslyEnrolled) {
             return res.status(400).json({
                 success:false,
-                message:"User have been already enrolled for this course."
+                message:"User has been already enrolled for this course."
             })
         }
     }catch(error) {
@@ -54,19 +56,24 @@ exports.capturePayment = async(req,res) => {
         })
     }
 
-    const amount = courseDetails.coursePrice;  //amount and currency are two mandatory things for an order to be placed successfully...
+    const amount = (courseDetails.coursePrice)*100;  //amount and currency are two mandatory things for an order to be placed successfully...
     const currency = "INR";
     //we have created an order...
     const options = {
-        amount: amount*100,
+        amount,       // convert to paisa
         currency,
-        receipt:Math.random(Date.now()).toString(),
+        receipt:`receipt_${Date.now()}`,
         notes:{
-            courseId:courseId,
-            userId:userId,
+            courseId:courseId.toString(),
+            userId:userId.toString(),
         }
     }
-
+    // console.log("Course Price:", courseDetails.coursePrice);
+    // console.log("Amount (paise):", amount);
+    // console.log("User ID:", userId);
+    // console.log("Course ID:", courseId);
+    // console.log("Options:", options);
+    // console.log("Razorpay Instance:", instance);
     //function call
     try{
         const paymentResponse = await instance.orders.create(options);
@@ -76,11 +83,12 @@ exports.capturePayment = async(req,res) => {
             success:true,
             courseName: courseDetails.courseName,
             coursePrice: courseDetails.coursePrice,
-            courseDescription:courseDetails.courseDescription,
-            thumbnail:courseDetails.thumbnail,
+            // courseDescription:courseDetails.courseDescription,
+            // thumbnail:courseDetails.thumbnail,
             orderId: paymentResponse.id,
             currency:paymentResponse.currency,
-            courseDuration: courseDetails.courseDuration,
+            amount: paymentResponse.amount,
+            // courseDuration: courseDetails.courseDuration,
         })
     }catch(error) {
         console.log(error.message);
@@ -94,21 +102,25 @@ exports.capturePayment = async(req,res) => {
 //verify the signature of Razorpay and Server...
 //checksum is used to verify the integrity of the data sent...(readmore)
 exports.verifySignature = async(req,res) => {
-    const webhooksecret = "258741369"; // we cannot convert the signature we have got from the req.body to its autual form so we will convert the webhooksecret into signature by using three steps..
-    const signature = req.headers["x-razorpay-signature"];
+    // "258741369"
+    // we cannot convert the signature we have got from the req.body to its autual form so we will convert the webhooksecret into signature by using three steps..
+    const { razorpay_order_id, razorpay_payment_id, razorpay_signature, courseId } = req.body;
+    const body = razorpay_order_id + "|" + razorpay_payment_id;
     //3 step process
-    const shasum = crypto.createHmac("sha256",webhooksecret)  // algorithm and secret needed...
-    shasum.update(JSON.stringify(req.body));
-    const digest = shasum.digest("hex");
+    const expectedSignature = crypto
+      .createHmac("sha256", process.env.RAZORPAY_SECRET)
+      .update(body.toString())
+      .digest("hex");
  
-    if(signature === digest) {  // payment is authorized...
+    if(razorpay_signature === expectedSignature) {  // payment is authorized...
         console.log("Payment is authorized...");
-
-        const {userId,courseId} = req.body.payload.payment.entity.notes;
+        const userId = req.user.id;
         try{
-            const userDetails = await User.findById(userId);
-            userDetails.courses.push(courseId);
-            const newUserDetails = await userDetails.save();
+            const newUserDetails = await User.findByIdAndUpdate(
+                userId,
+                { $addToSet: { courses: new mongoose.Types.ObjectId(courseId) } },
+                {new : true}
+            )
             if(!newUserDetails) {
                 return res.status(400).json({
                     success:false,
@@ -117,12 +129,8 @@ exports.verifySignature = async(req,res) => {
             }
 
             const newCourseDetails = await Course.findByIdAndUpdate(
-                {_id:courseId},
-                {
-                    $push:{
-                        studentsEnrolled: { user: userId }
-                    }
-                },
+                courseId,
+                { $addToSet: { studentsEnrolled: new mongoose.Types.ObjectId(userId) } },
                 {new:true}
             )
             if(!newCourseDetails) {
@@ -133,7 +141,7 @@ exports.verifySignature = async(req,res) => {
             }
 
             //send the mail of confirmation
-            await mailSender(userDetails.email,"Congo for purchasing the course.","Your most welcome to Studynotion family.");
+            await mailSender(newUserDetails.email,"Congo for purchasing the course.","Your most welcome to Studynotion family.");
 
             return res.status(200).json({
                 success:true,
@@ -153,5 +161,4 @@ exports.verifySignature = async(req,res) => {
             message:"Invalid request."
         })
     }
-
 }

@@ -3,12 +3,13 @@ import { useParams,useLocation } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import axios from 'axios';
 import Ratings from '../components/core/CoursePage/Ratings';
-import Button from '../components/core/Homepage/Button';
 import CourseSection from '../components/core/CoursePage/CourseSection';
 import { toast } from 'react-toastify';
 import { useRating } from './Contexts/RatingContext';
 import { useCourseDetails } from './Contexts/CourseContext';
 import API_BASE_URL from '../config/api';
+import { useNavigate } from 'react-router-dom';
+//buy now and add to cart buttons will be change based on if the course is added to cart or buyed earlier...
 
 const BuyCourse = () => {
     const {courseName} = useParams();  
@@ -20,19 +21,20 @@ const BuyCourse = () => {
     const [isCollapse,setIsCollapse] = useState(false);
     const {avgRating,totalRatings,fetchAvgRating,fetchTotalRating} = useRating();
     const {courseDetails,fetchCourse} = useCourseDetails();
+    const navigate = useNavigate();
+
     // console.log(currentPath);
     //temporarily i am changing the expiry time of the token....
-    
     useEffect(() => {
         fetchCourse(courseId);
     },[courseId]);
 
     useEffect(() => {
-        if(courseId && (!avgRating[courseId] || !totalRatings[courseId])) {
+        if (courseId) {
             fetchAvgRating([courseId]);
             fetchTotalRating([courseId]);
         }
-    },[courseId,avgRating,totalRatings]);
+    },[courseId]);
     
     const convertTime = (isoString) => {
         const dateObj = new Date(isoString);
@@ -56,12 +58,61 @@ const BuyCourse = () => {
                 toast.error("This course is already in cart.");
             }
             else if(err?.response?.data?.message == "This course is already purchased.") {
-                toast.error("This course is already purchased.")
+                toast.error("This course is already purchased.");
             }
             console.warn("Course cannot be added to cart.",err);
         }   
     }
-    //buy now and add to cart buttons will be change based on if the course is added to cart or buyed earlier...
+
+    async function handleBuyCourse() {
+        try{
+            // 1. Create order
+            const res = await axios.post(`${API_BASE_URL}/api/v1/payment/capture-payment`,{courseId:courseDetails._id});
+            console.log(res);
+            const { orderId, currency, amount } = res.data;
+
+            // 2. Razorpay Checkout options
+            const options = {
+                key: "rzp_test_R971nasbDvqiGS", 
+                amount,
+                currency,
+                name: "Studynotion",
+                description: "Course Purchase",
+                order_id: orderId,
+                handler: async function (response) {
+                    try {
+                        // Send payment details to backend for verification
+                        const verifyRes = await axios.post(`${API_BASE_URL}/api/v1/payment/verify-signature`, {
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_signature: response.razorpay_signature,
+                            courseId:courseDetails._id
+                        },
+                            { withCredentials: true }
+                        );
+
+                        if (verifyRes.data.success) {
+                            toast.success("Payment Successful! You are enrolled.");
+                            navigate("/dashboard/enrolled-courses");
+                        } else {
+                            toast.error("Payment verification failed!");
+                        }
+                    } catch (err) {
+                        console.error("Payment verification error:", err);
+                        toast.error("Something went wrong with payment verification.");
+                    }
+                },
+                theme: {
+                    color: "#47A5C5",
+                },
+            };
+            const razor = new window.Razorpay(options);
+            razor.open();
+        }catch(err) {
+            console.error(err);
+            alert("Payment failed, try again.");
+        }
+    }
     return (
         <div className='w-full'>
             <div className='w-full bg-[#161D29]'>
@@ -97,7 +148,7 @@ const BuyCourse = () => {
                                         9a9 9 0 019-9">
                                     </path>
                                 </svg>
-                                {courseDetails.languageUsed}
+                                {courseDetails.languageUsed || "N/A"}
                             </p>
                         </div>     
                     </div>
@@ -105,12 +156,13 @@ const BuyCourse = () => {
                         <div className='flex flex-col gap-4'>
                             <img src={courseDetails.thumbnail} alt="course image" loading='lazy' className='rounded-md'/>
                             <p className='tracking-wide text-[#C5C7D4] text-3xl'>{`Rs. ${courseDetails.coursePrice}`}</p>
-                            <Button active={true} arrow={false} linkto={`${currentPath}/make-payment`}>Buy Now</Button>
-                            <div 
-                            className={`bg-[#161D29] text-white font-semibold px-6 py-3 rounded-[8px] 
+                            <button className={`bg-[#FFD60A] text-black font-semibold px-6 py-3 rounded-[8px] 
+                                shadow-[3px_3px_0px_0px_rgba(30,41,59,0.6)] shadow-[#2E353E] cursor-pointer hover:scale-90 
+                                transition ease-in-out hover:shadow-[0px]`} onClick={handleBuyCourse}>Buy Now</button>
+                            <button className={`bg-[#161D29] text-white font-semibold px-6 py-3 rounded-[8px] 
                                 shadow-[3px_3px_0px_0px_rgba(30,41,59,0.6)] shadow-[#2E353E] cursor-pointer hover:scale-90 
                                 transition ease-in-out hover:shadow-[0px] text-center`}
-                            active={false} arrow={false} onClick={() => cartHandler()}>Add to Cart</div>
+                             onClick={() => cartHandler()}>Add to Cart</button>
                             <p className='w-fit mx-auto tracking-wide text-[#C5C7D4]'>30-Day Money-Back Guarantee</p>
                         </div>
                         <div className='border border-[#C5C7D4] '></div>
@@ -136,8 +188,8 @@ const BuyCourse = () => {
                         <h1 className='text-3xl font-bold tracking-wide'>What you'll Learn:</h1>
                         <ul className='pl-9'>
                             {
-                                courseDetails?.whatYouWillLearn?.map((ele) => (
-                                    <li className='tracking-wide list-disc marker:text-[#06D6A0] text-[#06D6A0]'>{ele}</li>
+                                courseDetails?.whatYouWillLearn?.map((ele,index) => (
+                                    <li key={index} className='tracking-wide list-disc marker:text-[#06D6A0] text-[#06D6A0]'>{ele}</li>
                                 ))
                             }
                         </ul>
