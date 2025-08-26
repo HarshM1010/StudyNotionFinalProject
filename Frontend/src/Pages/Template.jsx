@@ -47,8 +47,13 @@ const Template = (props) => {
                 try{
                     const res = await axios.post(`${API_BASE_URL}/api/v1/auth/send-otp`,{email: props.formData.email});
                     console.log(res);
-                    toast.success("This otp will be valid only for 5 mins.");
-                    navigate(`${currentPath}/verify-email`, { state: { formData: props.formData } });
+                    if(res.data.success) {
+                        toast.success("This otp will be valid only for 5 mins.");
+                        navigate(`${currentPath}/verify-email`, { state: { formData: props.formData } });
+                    }
+                    else {
+                        toast.error("Incorrect OTP");
+                    }
                 }catch(err) {
                     console.warn("Otp cannot be generated");
                     toast.error("Failed to send OTP");
